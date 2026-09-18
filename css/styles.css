@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    background-color: rgb(134, 47, 56);
+    padding-top: 20px;
+    color: #f7f3ee;
+    text-align: center;
+
+}

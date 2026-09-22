@@ -41,7 +41,7 @@
             </div>
         </div>
         <div id="Q2" class = "questionnaire-question-container hidden">
-            <h1>Q2: Are you 18 (or older) or will be 18 before voter registration ends (October 5th)?</h1>
+            <h1>Q2: Are you 18 (or older) or will be 18 before voter registration ends (November 3rd)?</h1>
             <div class="response-list">
 
                 <input type="radio" id="yes" name="q2_bool" value="yes" checked>
@@ -55,7 +55,11 @@
             </div>
         </div>
         <div id="Q3A" class = "questionnaire-question-container hidden">
-            <h1>Q3: Great! That means this website is just for you. Now we’ll ask you some survey questions. This survey is incredibly important to us, as it will give us crucial statistics that we will present as part of the CSForGood project, so we would really appreciate your participation. Would you like to take the survey? (By selecting "yes," you give us the right to collect all information you input. All data sent is anonymous.)</h1>
+            <h1>Q3: Great! That means this website is just for you.</h1>
+            <h2>Now we’ll ask you some survey questions. This survey is incredibly important to us, as it will give us crucial statistics that we will present as part of the CSForGood project, so we would really appreciate your participation.</h2>
+            <br>
+            <br>
+            <h1>Would you like to take the survey? (By selecting "yes," you give us the right to collect all information you input. All data sent is anonymous.)</h1>
             <div class="response-list">
 
                 <input type="radio" id="yes" name="q3_bool" value="yes" checked>
@@ -69,7 +73,11 @@
             </div>
         </div>
         <div id="Q3B" class = "questionnaire-question-container hidden">
-            <h1>Q3: While this website isn't for you just yet, this website will still hold very valuable information on how to register to vote when your time inevitably does come! Despite the time you must wait, we would still appreciate it if you would take the following survey. This survey is incredibly important to us, as it will give us crucial statistics that we will present as part of the CSForGood project, so we would really appreciate your participation. Would you like to take the survey? (By selecting "yes," you give us the right to collect all information you input. All data sent is anonymous.)</h1>
+            <h2>Q3: While this website isn't for you just yet, this website will still hold very valuable information on how to register to vote when your time inevitably does come!</h2>
+            <br>
+            <h2>Despite the time you must wait, we would still appreciate it if you would take the following survey. This survey is incredibly important to us, as it will give us crucial statistics that we will present as part of the CSForGood project, so we would really appreciate your participation.</h2>
+            <br>
+            <h1>Would you like to take the survey? (By selecting "yes," you give us the right to collect all information you input. All data sent is anonymous.)</h1>
             <div class="response-list">
 
                 <input type="radio" id="yes" name="q3_bool" value="yes" checked>
@@ -82,7 +90,19 @@
 
             </div>
         </div>
-        
+        <div id="survey-embed" class="questionnaire-question-container hidden">
+            <div style="display:flex; flex-direction: column;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQRXoOrJBmlvQa5YadMc4U78y8tqo2rSXTF4mkIGUpqRZZDQ/viewform?embedded=true" width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div style="padding-top: 2%;"></div>
+            
+            </div>
+        <div class="separator"></div>
+            <div style="padding-top: 2%;"></div>
+
+            <button type="submit" id = "submit_button_q3" style = "height: 80px;"onclick="done_with_questionnaire()">I'm done with the survey.</button>
+             <div style="padding-top: 2%;"></div>
+            
+        </div>
     </div>
 </body>
 </html>

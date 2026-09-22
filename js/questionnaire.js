@@ -58,11 +58,18 @@ function final_question() {
     switch (value) {
         case "yes":
             questionnaireContainers[2].classList.add('hidden')
-            questionnaireContainers[3].classList.remove('hidden')
+            questionnaireContainers[4].classList.remove('hidden')
             break;
         case "no":
-            <a href="index.html">Home</a>
+            localStorage.setItem("registered_to_vote", registered_to_vote)
+            localStorage.setItem("eligible_age", eligible_age)
+            window.location.replace("../shortBallot/index.html")
             break;
     }
   }
+}
+function done_with_questionnaire() {
+    window.location.replace("../shortBallot/index.html")
+    localStorage.setItem("registered_to_vote", registered_to_vote)
+    localStorage.setItem("eligible_age", eligible_age)
 }

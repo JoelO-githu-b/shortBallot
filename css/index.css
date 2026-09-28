@@ -85,7 +85,7 @@ body{
     border-width: 6px;
     margin: 15px;
     position: relative;
-    transition: transform 0.8s ease-in-out
+    transition: transform 0.8s ease-in-out;
     max-width: 100%;
     height: auto;
 }
@@ -99,7 +99,7 @@ body{
     border-width: 6px;
     margin: 15px;
     position: relative;
-    transition: transform 0.8s ease-in-out
+    transition: transform 0.8s ease-in-out;
     max-width: 100%;
     height: auto;
 }

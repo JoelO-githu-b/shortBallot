@@ -37,9 +37,9 @@ body{
     background-color: #fffdf2;
     border-radius: 2px;
     border-color: white;
-    box-shadow: 0 10px 10px rgba(1, 109, 57, 0.1);
-    width: 650px;
-    overflow:break-word;
+    box-shadow: 0 16px 16px rgba(1, 109, 57, 0.1);
+    width: 88%;
+    overflow: break-word;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -56,52 +56,50 @@ body{
 
 .cardcan{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 50%;
     border-radius: 4px;
-    margin:10px;
-     box-shadow: 0 10px 10px rgba(1, 109, 57, 0.1);
-    width: 340px;
+    /* background-color: #bc3838; */
+    box-shadow: 0 15px 15px rgba(1, 1, 1, 0.3);
+    width: auto;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:10px;
     text-align: center;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     position: relative;
     max-width: 100%;
     height: auto;
 }
-
 .cardcan img{
-    width: 250px
-    
+    object-fit:cover;
+
+    width: 250px   
 }
-
-
-
 .cardrep{
     background-color: rgb(167, 28, 28);
     color: #fcfcff;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border: rgb(18, 57, 165);
     border-style: double;
     border-width: 6px;
     margin: 15px;
     position: relative;
-    transition: transform 0.8s ease-in-out;
-    max-width: 100%;
-    height: auto;
+    height:400px;
+
 }
 
 .carddem{
     background-color: rgb(12, 47, 142);
     color: #fcfcff;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border: #bc3838;
     border-style: double;
     border-width: 6px;
     margin: 15px;
+    height:400px;
     position: relative;
-    transition: transform 0.8s ease-in-out;
-    max-width: 100%;
-    height: auto;
 }
 
 img{
@@ -109,9 +107,9 @@ img{
 }
 
 .cardrep:hover{
-    transform: scale(1.01);
+    transform: scale(1.07);
 }
 
 .carddem:hover{
-    transform: scale(1.01);
+    transform: scale(1.07);
 }

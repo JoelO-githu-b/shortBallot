@@ -70,23 +70,26 @@ body{
     justify-content: center;
     position: relative;
     max-width: 100%;
+    
     height: auto;
 }
 .cardcan img{
     object-fit:cover;
+    width:100%;
 
-    width: 250px   
 }
 .cardrep{
     background-color: rgb(167, 28, 28);
     color: #fcfcff;
     transition: transform 0.2s ease-in-out;
-    border: rgb(18, 57, 165);
+    border: rgb(167, 28, 28);
     border-style: double;
     border-width: 6px;
     margin: 15px;
     position: relative;
     height:400px;
+    width:50%;
+    max-width: 55%;
 
 }
 
@@ -94,16 +97,48 @@ body{
     background-color: rgb(12, 47, 142);
     color: #fcfcff;
     transition: transform 0.2s ease-in-out;
-    border: #bc3838;
+    border: rgb(12, 47, 142);
     border-style: double;
     border-width: 6px;
     margin: 15px;
     height:400px;
     position: relative;
+    width:50%;
+    max-width: 55%;
+
+
+}
+.cardlib{
+    background-color: rgb(255, 187, 0);
+    color: #fcfcff;
+    transition: transform 0.2s ease-in-out;
+    border: rgb(255, 187, 0);
+    border-style: double;
+    border-width: 6px;
+    margin: 15px;
+    height:400px;
+    position: relative;
+    width:50%;
+    max-width: 55%;
+}
+.cardlincoln{
+    background-color: rgb(218, 17, 50);
+    color: #fcfcff;
+    transition: transform 0.2s ease-in-out;
+    border: rgb(218, 17, 50);
+    border-style: double;
+    border-width: 6px;
+    margin: 15px;
+    height:400px;
+    position: relative;
+    width:50%;
+    max-width: 55%;
 }
 
 img{
-    max-height: 75%;
+    max-width: 100%;
+    height:55%;
+    max-height: 88%;
 }
 
 .cardrep:hover{
@@ -111,5 +146,12 @@ img{
 }
 
 .carddem:hover{
+    transform: scale(1.07);
+}
+
+.cardlib:hover{
+    transform: scale(1.07);
+}
+.cardlincoln:hover{
     transform: scale(1.07);
 }

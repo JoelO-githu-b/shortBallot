@@ -40,7 +40,6 @@ body {
     width: 88%;
     max-width: 1000px; 
     overflow: visible;
-    overflow: break-word;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -90,40 +89,6 @@ body {
 .cardrep {
     background-color: rgb(167, 28, 28);
     border-color: rgb(28, 65, 167);
-    /* background-color: #bc3838; */
-    box-shadow: 0 15px 15px rgba(1, 1, 1, 0.3);
-    width: auto;
-    margin-left:10px;
-    margin-right:10px;
-    margin-top:10px;
-    margin-bottom:10px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    max-width: 100%;
-    
-    height: auto;
-}
-.cardcan img{
-    object-fit:cover;
-    width:100%;
-
-}
-.cardrep{
-    background-color: rgb(167, 28, 28);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(167, 28, 28);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    position: relative;
-    height:400px;
-    width:50%;
-    max-width: 55%;
-
 }
 
 .carddem {
@@ -167,64 +132,4 @@ button{
 
 .readmore.show {
     display: block;
-}
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(12, 47, 142);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
-
-
-}
-.cardlib{
-    background-color: rgb(255, 187, 0);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(255, 187, 0);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
-}
-.cardlincoln{
-    background-color: rgb(218, 17, 50);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(218, 17, 50);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
-}
-
-img{
-    max-width: 100%;
-    height:55%;
-    max-height: 88%;
-}
-
-.cardrep:hover{
-    transform: scale(1.07);
-}
-
-.carddem:hover{
-    transform: scale(1.07);
-}
-
-.cardlib:hover{
-    transform: scale(1.07);
-}
-.cardlincoln:hover{
-    transform: scale(1.07);
 }

@@ -1,14 +1,14 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(48, 73, 119);
-    
 }
-#header{
+
+#header {
     background-color: rgb(107, 27, 38);
     max-width: 100%;
     height: auto;
-      border-color: #f7f3ee;
+    border-color: #f7f3ee;
     border-style: solid;
     border-width: 10px;
     border-left: 0px;
@@ -20,138 +20,116 @@ body{
     color: #f7f3ee;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
-.main{
-    padding: auto;
+.main {
+    padding: 0;
     margin: auto;
     max-width: 100%;
     height: auto;
 }
 
-.cardmain{
+.cardmain {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height:auto;
-    margin: 0 auto;
+    height: auto;
+    margin: 0 auto 20px auto;
     background-color: #fffdf2;
     border-radius: 2px;
     border-color: white;
     box-shadow: 0 16px 16px rgba(1, 109, 57, 0.1);
     width: 88%;
-    overflow: break-word;
+    max-width: 1000px; 
+    overflow: visible;
     text-align: center;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    
+    padding-bottom: 20px;
 }
 
-.cardmain h3{
+.cardmain h3 {
     text-decoration: underline overline;
     text-decoration-color: rgb(241, 233, 223);
     text-decoration-thickness: 2px;
-    
 }
 
-.cardcan{
+.cardcan {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 4px;
-    /* background-color: #bc3838; */
-    box-shadow: 0 15px 15px rgba(1, 1, 1, 0.3);
-    width: auto;
-    margin-left:10px;
-    margin-right:10px;
-    margin-top:10px;
-    margin-bottom:10px;
+    margin: 0 auto;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    position: relative;
-    max-width: 100%;
-    
-    height: auto;
+    align-items: flex-start;
 }
-.cardcan img{
-    object-fit:cover;
-    width:100%;
 
+.cardrep, .carddem, .cardlib, .cardlincoln {
+    color: #fcfcff;
+    transition: transform 0.2s ease-in-out;
+    border-style: double;
+    border-width: 6px;
+    margin: 15px;
+    height: auto;           
+    width: 260px;          
+    border-radius: 6px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 400px;
+    padding-bottom: 20px;
 }
-.cardrep{
+
+.cardparty {
+    color: rgba(255, 254, 247, 0.669);
+}
+
+.cardrep {
     background-color: rgb(167, 28, 28);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(167, 28, 28);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    position: relative;
-    height:400px;
-    width:50%;
-    max-width: 55%;
-
+    border-color: rgb(28, 65, 167);
 }
 
-.carddem{
+.carddem {
     background-color: rgb(12, 47, 142);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(12, 47, 142);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
-
-
+    border-color: rgb(142, 12, 23);
 }
-.cardlib{
+
+.cardlib {
     background-color: rgb(255, 187, 0);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(255, 187, 0);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
-}
-.cardlincoln{
-    background-color: rgb(218, 17, 50);
-    color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
-    border: rgb(218, 17, 50);
-    border-style: double;
-    border-width: 6px;
-    margin: 15px;
-    height:400px;
-    position: relative;
-    width:50%;
-    max-width: 55%;
+    border-color: rgb(255, 251, 241);
 }
 
-img{
-    max-width: 100%;
-    height:55%;
-    max-height: 88%;
+.cardlincoln {
+    background-color: rgb(138, 2, 22);
+    border-color: rgb(255, 250, 251);
 }
 
-.cardrep:hover{
-    transform: scale(1.07);
+.cardcan img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
 }
 
-.carddem:hover{
-    transform: scale(1.07);
+.cardrep:hover, .carddem:hover, .cardlib:hover, .cardlincoln:hover {
+    transform: scale(1.05);
 }
 
-.cardlib:hover{
-    transform: scale(1.07);
+button{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.299);
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
 }
-.cardlincoln:hover{
-    transform: scale(1.07);
+.readmore {
+    display: none;
+}
+
+.readmore.show {
+    display: block;
 }

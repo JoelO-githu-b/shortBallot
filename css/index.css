@@ -2,24 +2,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(48, 73, 119);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
 }
 
 #header {
     background-color: rgb(107, 27, 38);
     max-width: 100%;
     height: auto;
-    border-color: #f7f3ee;
-    border-style: solid;
-    border-width: 10px;
-    border-left: 0px;
-    border-top: 0px;
-    border-right: 0px;
+    border-bottom: 10px solid #f7f3ee;
     padding-top: 20px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     color: #f7f3ee;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .main {
@@ -30,34 +26,22 @@ body {
 }
 
 .cardmain {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: auto;
     margin: 0 auto 20px auto;
     background-color: #fffdf2;
-    border-radius: 2px;
-    border-color: white;
-    box-shadow: 0 16px 16px rgba(1, 109, 57, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
     width: 88%;
     max-width: 1000px; 
-    overflow: visible;
     text-align: center;
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
 }
 
-.cardmain h3 {
-    text-decoration: underline overline;
-    text-decoration-color: rgb(241, 233, 223);
-    text-decoration-thickness: 2px;
-}
-
 .cardcan {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 4px;
     margin: 0 auto;
     width: 100%;
-    text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,69 +51,224 @@ body {
 
 .cardrep, .carddem, .cardlib, .cardlincoln {
     color: #fcfcff;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
     border-style: double;
     border-width: 6px;
     margin: 15px;
-    height: auto;           
+    height: 380px;           
     width: 260px;          
-    border-radius: 6px;
-    padding-bottom: 15px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    max-height: 400px;
-    padding-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cardname h1 {
+    font-size: 22px;
+    margin: 12px 0 4px 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.cardparty h2 {
+    text-align: center;
+
+    font-size: 16px;
+    margin: 0 0 12px 0;
 }
 
 .cardparty {
-    color: rgba(255, 254, 247, 0.669);
+    color: rgba(255, 254, 247, 0.75);
 }
 
-.cardrep {
-    background-color: rgb(167, 28, 28);
-    border-color: rgb(28, 65, 167);
-}
-
-.carddem {
-    background-color: rgb(12, 47, 142);
-    border-color: rgb(142, 12, 23);
-}
-
-.cardlib {
-    background-color: rgb(255, 187, 0);
-    border-color: rgb(255, 251, 241);
-}
-
-.cardlincoln {
-    background-color: rgb(138, 2, 22);
-    border-color: rgb(255, 250, 251);
-}
+.cardrep { background-color: rgb(167, 28, 28); border-color: rgb(28, 65, 167); }
+.carddem { background-color: rgb(12, 47, 142); border-color: rgb(142, 12, 23); }
+.cardlib { background-color: rgb(219, 161, 0); border-color: rgb(255, 251, 241); color: #111; }
+.cardlib .cardparty { color: rgba(0, 0, 0, 0.65); }
+.cardlincoln { background-color: rgb(138, 2, 22); border-color: rgb(255, 250, 251); }
 
 .cardcan img {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 180px;
     border-bottom: 4px solid rgba(255, 255, 255, 0.2);
 }
 
 .cardrep:hover, .carddem:hover, .cardlib:hover, .cardlincoln:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-button{
-    color:white;
-    background-color: rgba(0, 0, 0, 0.299);
-    border: none;
-    margin: 10px;
+button.more-btn, .close-btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: auto 15px 15px 15px;
+    padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
 }
+.cardlib button.more-btn {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #000;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+button.more-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
 .readmore {
     display: none;
 }
 
-.readmore.show {
-    display: block;
+/* ==========================================================================
+   🎬 FIXED INTERACTIVE MODAL FULLSCREEN CONFIGURATIONS
+   ========================================================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Container setups for active cloning processes */
+.expanded-card-active {
+    position: fixed;
+    z-index: 1001; /* Keep it above everything initially */
+    /* Use explicit cubic-bezier transition curves for smooth timing synchronization */
+    transition: top 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                left 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                width 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                height 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                border-radius 0.45s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-style: double;
+    border-width: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+/* The .expanded rules are applied via JS to calculate positions with a 5% margin */
+.expanded-card-active.expanded {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+/* Left Content Column */
+.modal-left-hero {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-right: 4px solid rgba(255, 255, 255, 0.15);
+    background: inherit;
+    box-sizing: border-box;
+    transition: width 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.modal-left-hero img {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+}
+
+/* Right Scrollable Column */
+.modal-scroll-content {
+    width: 70%;
+    height: 100%;
+    padding: 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    min-width: 320px; /* Forces a stable layout tracking width baseline */
+}
+
+/* 🚀 GRACEFUL TEXT FADE INTERFACES */
+.modal-scroll-content > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease 0.15s, transform 0.35s ease 0.15s;
+}
+
+/* Trigger content phasing once expansion completes */
+.expanded-card-active.expanded .modal-scroll-content > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-scroll-content h3 {
+    margin-top: 0;
+    font-size: 32px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 12px;
+}
+.modal-scroll-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.95);
+}
+.cardlib .modal-scroll-content p {
+    color: #111;
+}
+
+.modal-scroll-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-scroll-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+.modal-scroll-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.close-btn {
+    margin: auto 20px 20px 20px;
+    background: #cc2929;
+    padding: 12px;
+    font-size: 15px;
+}
+.close-btn:hover {
+    background: #ff3333;
+}
+
+/* Responsive Overrides */
+@media (max-width: 800px) {
+    .expanded-card-active.expanded {
+        flex-direction: column !important;
+    }
+    .modal-left-hero {
+        width: 100% !important;
+        height: 35% !important;
+        border-right: none;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.15);
+    }
+    .modal-left-hero img { height: 55%; }
+    .modal-scroll-content { width: 100% !important; height: 65% !important; padding: 20px; min-width: 0; }
 }
